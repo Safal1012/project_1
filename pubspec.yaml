@@ -33,7 +33,7 @@ dependencies:
   google_fonts: ^5.1.0
   font_awesome_flutter: ^10.5.0
   simple_gradient_text:
-  flutter_credit_card: ^3.0.7
+  lottie: ^2.6.0
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
@@ -65,7 +65,7 @@ flutter:
   assets:
     - assets/images/  # now we can access all the files from images folder
     - assets/icons/   # now we can access all the files from icons folder
-
+    - assets/animation/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
