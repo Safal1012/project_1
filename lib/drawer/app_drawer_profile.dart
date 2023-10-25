@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:project_1/fi_atm.dart';
 
 void main() {
   runApp(MaterialApp(
