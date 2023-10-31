@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: AppDrawer(),
   ));
 }
 
 class AppDrawer extends StatelessWidget {
+  const AppDrawer({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -43,7 +45,7 @@ class AppDrawer extends StatelessWidget {
                 width: 100,
                 height: 20,
               ),
-              Divider(),
+              const Divider(),
               const SizedBox(
                 width: 100,
                 height: 10,
@@ -140,13 +142,13 @@ class AppDrawer extends StatelessWidget {
                   padding: const EdgeInsets.all(8.0),
                   child: ElevatedButton(
                     onPressed: () {},
-                    child: const Text("Logout"),
                     style: ElevatedButton.styleFrom(
                       backgroundColor: Colors.redAccent[200],
                       shadowColor: Colors.redAccent[200],
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(50)),
                     ),
+                    child: const Text("Logout"),
                   ),
                 ),
               ),
@@ -168,7 +170,7 @@ class DrawerHome extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(
+        leading: const Icon(
           Icons.menu,
         ),
         title: const Text("Dashboard"),
@@ -180,7 +182,7 @@ class DrawerHome extends StatelessWidget {
             child: Container(
               width: double.infinity,
               height: 200,
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                   image: DecorationImage(
                       fit: BoxFit.contain,
                       image: AssetImage(

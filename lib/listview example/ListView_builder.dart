@@ -19,6 +19,8 @@ class ListView_Builder extends StatelessWidget {
     "assets/images/ramen.png",
     "assets/images/salad.png"
   ];
+
+  ListView_Builder({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,24 +30,24 @@ class ListView_Builder extends StatelessWidget {
       body: ListView(children: [
         const ListTile(
           leading: CircleAvatar(
-            child: Icon(Icons.insert_link_outlined),
             backgroundColor: Colors.teal,
+            child: Icon(Icons.insert_link_outlined),
           ),
           title: Text("Create Call Link"),
           subtitle: Text('Share a link'),
         ),
-        Padding(
-          padding: const EdgeInsets.only(left: 18.0),
+        const Padding(
+          padding: EdgeInsets.only(left: 18.0),
           child: Text("Recent"),
         ),
         ListView.builder(
             physics:
-                NeverScrollableScrollPhysics(), // turn off scrolling property of inner listview
+                const NeverScrollableScrollPhysics(), // turn off scrolling property of inner listview
             shrinkWrap: true,
             itemCount: 10,
             itemBuilder: (context, index) {
               return ListTile(
-                title: Text("hello"),
+                title: const Text("hello"),
                 subtitle: const Row(
                   children: [
                     Icon(
@@ -57,7 +59,7 @@ class ListView_Builder extends StatelessWidget {
                   ],
                 ),
                 leading: Image.asset(images[index]),
-                trailing: Icon(Icons.call),
+                trailing: const Icon(Icons.call),
               );
             }),
       ]),

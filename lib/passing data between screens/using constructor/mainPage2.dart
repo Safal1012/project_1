@@ -4,17 +4,19 @@ import 'package:project_1/passing%20data%20between%20screens/using%20constructor
 import 'package:project_1/passing%20data%20between%20screens/using%20navigator/dummydata.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: MainPage2(),
   ));
 }
 
 class MainPage2 extends StatelessWidget {
+  const MainPage2({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Data Passing'),
+        title: const Text('Data Passing'),
       ),
       body: Center(
         child: Column(
@@ -27,8 +29,8 @@ class MainPage2 extends StatelessWidget {
                         location: "Kakkanad",
                         phone: 9845678934,
                         img: products[0]['image']))),
-                child: Text('To StateLess')),
-            SizedBox(
+                child: const Text('To StateLess')),
+            const SizedBox(
               height: 20,
             ),
             ElevatedButton(
@@ -38,7 +40,7 @@ class MainPage2 extends StatelessWidget {
                         location: "Kakkanad",
                         phone: 9845678934,
                         img: products[3]['image']))),
-                child: Text('To StateFul'))
+                child: const Text('To StateFul'))
           ],
         ),
       ),

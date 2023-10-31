@@ -34,12 +34,12 @@ class BottomSheet extends StatelessWidget {
     showModalBottomSheet(
         context: context,
         builder: (context) {
-          return Column(
+          return const Column(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 10),
+                padding: EdgeInsets.only(top: 10),
                 child: Text(
                   'Share Via',
                   style: TextStyle(fontSize: 15),

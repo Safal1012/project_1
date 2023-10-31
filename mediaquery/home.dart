@@ -3,12 +3,14 @@ import 'mobileScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: HomePage(),
   ));
 }
 
 class HomePage extends StatefulWidget {
+  const HomePage({super.key});
+
   @override
   State<HomePage> createState() => _HomePageState();
 }
@@ -18,9 +20,9 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     var devicewidth = MediaQuery.of(context).size.width;
     if (devicewidth < 600) {
-      return MobileScreen();
+      return const MobileScreen();
     } else {
-      return BigScreen();
+      return const BigScreen();
     }
   }
 }

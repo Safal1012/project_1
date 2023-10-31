@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: DrawerEx(),
   ));
 }
@@ -13,11 +13,11 @@ class DrawerEx extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("My Drawer"),
+        title: const Text("My Drawer"),
       ),
       drawer: Drawer(
         child: ListView(
-          children: [
+          children: const [
             UserAccountsDrawerHeader(
               decoration: BoxDecoration(
                   image: DecorationImage(

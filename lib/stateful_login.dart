@@ -4,12 +4,14 @@ import 'home.dart';
 import 'stateful_registration.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: Login_stateful(),
   ));
 }
 
 class Login_stateful extends StatefulWidget {
+  const Login_stateful({super.key});
+
   @override
   State<Login_stateful> createState() => _Login_statefulState();
 }
@@ -67,17 +69,17 @@ class _Login_statefulState extends State<Login_stateful> {
                     final valid = key1.currentState!.validate();
                     if (valid) {
                       Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => Home()));
+                          MaterialPageRoute(builder: (context) => const Home()));
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text('Inavlid datas')));
                     }
                   },
-                  child: Text("Login")),
+                  child: const Text("Login")),
               TextButton(
                   onPressed: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                        builder: (context) => Reg_stateful()));
+                        builder: (context) => const Reg_stateful()));
                   },
                   child: const Text('Not a User? SignUp Here!!!!'))
             ],

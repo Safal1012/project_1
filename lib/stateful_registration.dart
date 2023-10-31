@@ -9,6 +9,8 @@ import 'stateful_login.dart';
 // }
 
 class Reg_stateful extends StatefulWidget {
+  const Reg_stateful({super.key});
+
   @override
   State<Reg_stateful> createState() => _Reg_statefulState();
 }
@@ -98,7 +100,7 @@ class _Reg_statefulState extends State<Reg_stateful> {
                           icon: Icon(passwordhidden == true
                               ? Icons.visibility_off_sharp
                               : Icons.visibility)),
-                      border: OutlineInputBorder(),
+                      border: const OutlineInputBorder(),
                       hintText: 'Password'),
                 ),
               ),
@@ -115,7 +117,7 @@ class _Reg_statefulState extends State<Reg_stateful> {
                   obscureText: cpasshidden,
                   obscuringCharacter: "*",
                   decoration: InputDecoration(
-                      border: OutlineInputBorder(),
+                      border: const OutlineInputBorder(),
                       hintText: 'Password',
                       suffixIcon: IconButton(
                           onPressed: () {
@@ -137,13 +139,13 @@ class _Reg_statefulState extends State<Reg_stateful> {
                     final valid = formkey.currentState!.validate();
                     if (valid) {
                       Navigator.of(context).push(MaterialPageRoute(
-                          builder: (context) => Login_stateful()));
+                          builder: (context) => const Login_stateful()));
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(
                           const SnackBar(content: Text('Inavlid datas')));
                     }
                   },
-                  child: Text("Login"))
+                  child: const Text("Login"))
             ],
           ),
         ),

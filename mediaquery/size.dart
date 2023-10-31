@@ -13,6 +13,8 @@ void main() {
 class Media extends StatelessWidget {
   var size, height, width;
 
+  Media({super.key});
+
   @override
   Widget build(BuildContext context) {
     // getting the size of the window
@@ -22,7 +24,7 @@ class Media extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Media Query Seminar"),
+        title: const Text("Media Query Seminar"),
         backgroundColor: Colors.green,
       ),
       body: Container(

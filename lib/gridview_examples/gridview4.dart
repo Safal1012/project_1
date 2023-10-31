@@ -2,13 +2,15 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: GridView4(),
     ),
   );
 }
 
 class GridView4 extends StatelessWidget {
+  const GridView4({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,11 +22,11 @@ class GridView4 extends StatelessWidget {
             (index) => Card(
                   child: Row(
                     children: [
-                      Icon(
+                      const Icon(
                         Icons.account_circle,
                         size: 30,
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 10,
                       ),
                       Expanded(

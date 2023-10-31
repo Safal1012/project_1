@@ -20,6 +20,8 @@ class GridView3 extends StatelessWidget {
     "assets/images/salad.png"
   ];
 
+  GridView3({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

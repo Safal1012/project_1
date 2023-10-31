@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:project_1/custom%20widget/refractoring_widget.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: Grid_with_Refractoring(),
   ));
 }
 
 class Grid_with_Refractoring extends StatelessWidget {
+  const Grid_with_Refractoring({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

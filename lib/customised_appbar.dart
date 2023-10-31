@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:project_1/listview%20example/ListView_builder.dart';
 import 'package:project_1/listview%20example/listview2.dart';
 import 'package:project_1/listview%20example/listview_constructor.dart';
@@ -32,7 +31,7 @@ class AppBar1 extends StatelessWidget {
             PopupMenuButton(itemBuilder: (context) {
               return [
                 const PopupMenuItem(child: Text("New group")),
-                const PopupMenuItem(child: Text("New brodcast")),
+                const PopupMenuItem(child: Text("New broadcast")),
                 const PopupMenuItem(child: Text("Linked devices")),
                 const PopupMenuItem(child: Text("Starred messages")),
                 const PopupMenuItem(child: Text("Payments")),
@@ -66,9 +65,9 @@ class AppBar1 extends StatelessWidget {
         ),
         body: TabBarView(
           children: [
-            ListView1(),
+            const ListView1(),
             ListView2(),
-            ListView_Separator(),
+            const ListView_Separator(),
             ListView_Builder(),
           ],
         ),

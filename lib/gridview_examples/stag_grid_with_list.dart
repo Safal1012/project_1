@@ -23,11 +23,13 @@ class StaggeredGridd2 extends StatelessWidget {
   var cac = [2, 3, 2, 2, 2, 1, 2, 3, 2, 1];
   var mac = [1, 2, 2, 4, 1, 2, 3, 1, 1, 2];
 
+  StaggeredGridd2({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Staggered Grid View'),
+        title: const Text('Staggered Grid View'),
       ),
       body: SingleChildScrollView(
         child: StaggeredGrid.count(

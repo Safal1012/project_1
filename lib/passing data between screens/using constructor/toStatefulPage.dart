@@ -28,10 +28,10 @@ class _DataStatefulState extends State<DataStateful> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Image.network(widget.img, height: 200),
-            Text("Name :   ${widget.name}", style: TextStyle(fontSize: 40)),
+            Text("Name :   ${widget.name}", style: const TextStyle(fontSize: 40)),
             Text("Location :  ${widget.location}",
-                style: TextStyle(fontSize: 30)),
-            Text("Phone :   ${widget.phone}", style: TextStyle(fontSize: 20)),
+                style: const TextStyle(fontSize: 30)),
+            Text("Phone :   ${widget.phone}", style: const TextStyle(fontSize: 20)),
           ],
         ),
       ),

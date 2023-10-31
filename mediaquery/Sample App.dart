@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: MyApp(),
   ));
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) => MaterialApp(
         title: 'MediaQuery Demo',
@@ -75,7 +75,7 @@ class _MediaQueryWidgetState extends State<_MediaQueryWidget> {
           _text('Inverting Colors: ${media.invertColors}'),
           _text('In High Contrast: ${MediaQuery.highContrastOf(context)}'),
           _text('Disable Animation: ${media.disableAnimations}'),
-          _text('In Bold Text: ${MediaQuery.boldTextOverride(context)}'),
+          _text('In Bold Text: ${MediaQuery.boldTextOf(context)}'),
           _text('Navigation Mode: ${media.navigationMode}'),
           _text('Orientation: ${media.orientation}'),
         ],
@@ -88,7 +88,7 @@ class _MediaQueryWidgetState extends State<_MediaQueryWidget> {
         padding: const EdgeInsets.all(8),
         child: Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             fontSize: 14.0,
             color: Colors.black,
           ),

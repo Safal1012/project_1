@@ -4,12 +4,14 @@ import 'package:project_1/passing%20data%20between%20screens/using%20navigator/d
 
 void main() {
   runApp(MaterialApp(
-    home: ProductMain(),
-    routes: {'details': (context) => ProductDetails()},
+    home: const ProductMain(),
+    routes: {'details': (context) => const ProductDetails()},
   ));
 }
 
 class ProductMain extends StatelessWidget {
+  const ProductMain({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

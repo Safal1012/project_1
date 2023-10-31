@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:project_1/storages/loginshared.dart';
+import 'package:project_1/storages/shared%20preff/loginshared.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class RegistrationPage extends StatefulWidget {
+  const RegistrationPage({super.key});
+
   @override
   State<RegistrationPage> createState() => _RegistrationPageState();
 }
@@ -17,7 +19,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Registration Page'),
+        title: const Text('Registration Page'),
       ),
       body: Center(
         child: Column(
@@ -27,7 +29,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               padding: const EdgeInsets.all(15.0),
               child: TextField(
                 controller: name,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     border: OutlineInputBorder(), labelText: 'Name'),
               ),
             ),
@@ -35,7 +37,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               padding: const EdgeInsets.all(15.0),
               child: TextField(
                 controller: uname,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     border: OutlineInputBorder(), labelText: 'UserName'),
               ),
             ),
@@ -43,7 +45,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               padding: const EdgeInsets.all(15.0),
               child: TextField(
                 controller: pwd,
-                decoration: InputDecoration(
+                decoration: const InputDecoration(
                     border: OutlineInputBorder(), labelText: 'Password'),
                 obscureText: true,
               ),
@@ -52,7 +54,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
               padding: const EdgeInsets.all(15.0),
               child: ElevatedButton(
                 onPressed: () => storedata(),
-                child: Text('Register'),
+                child: const Text('Register'),
               ),
             )
           ],
@@ -66,12 +68,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
     String username = uname.text;
     String password = pwd.text;
 
-    preferences = await SharedPreferences.getInstance()!;
+    preferences = await SharedPreferences.getInstance();
     preferences.setString('name', personname);
     preferences.setString('uname', username);
     preferences.setString('pwd', password);
 
     Navigator.of(context)
-        .push(MaterialPageRoute(builder: (context) => LoginShared()));
+        .push(MaterialPageRoute(builder: (context) => const LoginShared()));
   }
 }

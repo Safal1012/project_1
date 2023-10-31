@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: ExpansionTileEx(),
   ));
 }
 
 class ExpansionTileEx extends StatelessWidget {
+  const ExpansionTileEx({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

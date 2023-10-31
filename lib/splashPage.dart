@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class SplashPage extends StatelessWidget {
+  const SplashPage({super.key});
+
   @override
   //to create our widget tree we use build function
   Widget build(BuildContext context) {

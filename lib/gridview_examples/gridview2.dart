@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: GridView2(),
   ));
 }
 
 class GridView2 extends StatelessWidget {
+  const GridView2({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

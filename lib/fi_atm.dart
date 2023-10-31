@@ -5,12 +5,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:simple_gradient_text/simple_gradient_text.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: FiCard(),
   ));
 }
 
 class FiCard extends StatelessWidget {
+  const FiCard({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +33,7 @@ class FiCard extends StatelessWidget {
                 children: [
                   Transform.rotate(
                     angle: 90 * pi / 180,
-                    child: Icon(
+                    child: const Icon(
                       Icons.sim_card_rounded,
                       color: Colors.white,
                       size: 40,
@@ -39,7 +41,7 @@ class FiCard extends StatelessWidget {
                   ),
                   Transform.rotate(
                     angle: 90 * pi / 180,
-                    child: Icon(
+                    child: const Icon(
                       Icons.wifi,
                       color: Colors.white,
                       size: 30,
@@ -76,8 +78,8 @@ class FiCard extends StatelessWidget {
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
                 ),
-                colors: [Colors.black12, Colors.white, Colors.white70],
-                stops: [0, .3, 1],
+                colors: const [Colors.black12, Colors.white, Colors.white70],
+                stops: const [0, .3, 1],
               ),
             ),
           ],

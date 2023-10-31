@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:project_1/storages/homeshared.dart';
-import 'package:project_1/storages/registration_page.dart';
+import 'package:project_1/storages/shared%20preff/homeshared.dart';
+import 'package:project_1/storages/shared%20preff/registration_page.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: LoginShared(),
   ));
 }
@@ -35,7 +35,7 @@ class _LoginSharedState extends State<LoginShared> {
     if (!newUser) {
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => HomeShared()),
+        MaterialPageRoute(builder: (context) => const HomeShared()),
       );
     }
   }
@@ -44,7 +44,7 @@ class _LoginSharedState extends State<LoginShared> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Login Page"),
+        title: const Text("Login Page"),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20.0),
@@ -52,7 +52,7 @@ class _LoginSharedState extends State<LoginShared> {
           children: [
             TextField(
               controller: userName,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "UserName",
                 border: OutlineInputBorder(),
               ),
@@ -62,7 +62,7 @@ class _LoginSharedState extends State<LoginShared> {
             ),
             TextField(
               controller: passWord,
-              decoration: InputDecoration(
+              decoration: const InputDecoration(
                 hintText: "Password",
                 border: OutlineInputBorder(),
               ),
@@ -72,16 +72,16 @@ class _LoginSharedState extends State<LoginShared> {
             ),
             ElevatedButton(
               onPressed: validateAndLogin,
-              child: Text("Login"),
+              child: const Text("Login"),
             ),
             Padding(
               padding: const EdgeInsets.all(15.0),
               child: ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => RegistrationPage()));
+                      builder: (context) => const RegistrationPage()));
                 },
-                child: Text('Go to Registration Page'),
+                child: const Text('Go to Registration Page'),
               ),
             ),
           ],
@@ -105,20 +105,20 @@ class _LoginSharedState extends State<LoginShared> {
 
       // Navigate to the home page
       Navigator.of(context).pushReplacement(
-          MaterialPageRoute(builder: (context) => HomeShared()));
+          MaterialPageRoute(builder: (context) => const HomeShared()));
     } else {
       // Show an error message for login failure
       showDialog(
         context: context,
         builder: (context) => AlertDialog(
-          title: Text('Login Failed'),
-          content: Text('Invalid username or password. Please try again.'),
+          title: const Text('Login Failed'),
+          content: const Text('Invalid username or password. Please try again.'),
           actions: <Widget>[
             TextButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              child: Text('OK'),
+              child: const Text('OK'),
             ),
           ],
         ),

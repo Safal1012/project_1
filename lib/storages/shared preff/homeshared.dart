@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:project_1/storages/loginshared.dart';
+import 'package:project_1/storages/shared%20preff/loginshared.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class HomeShared extends StatefulWidget {
+  const HomeShared({super.key});
+
   @override
   State<HomeShared> createState() => _HomeSharedState();
 }
@@ -23,6 +25,7 @@ class _HomeSharedState extends State<HomeShared> {
     });
   }
 
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
@@ -37,7 +40,7 @@ class _HomeSharedState extends State<HomeShared> {
               onPressed: () {
                 prefs.setBool('firstlogin', true);
                 Navigator.pushReplacement(context,
-                    MaterialPageRoute(builder: (context) => LoginShared()));
+                    MaterialPageRoute(builder: (context) => const LoginShared()));
               },
               child: const Text("Logout"),
             )

@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:project_1/passing%20data%20between%20screens/using%20navigator/dummydata.dart';
 
 class ProductDetails extends StatelessWidget {
+  const ProductDetails({super.key});
+
   @override
   Widget build(BuildContext context) {
     // id from previous page
@@ -10,7 +12,7 @@ class ProductDetails extends StatelessWidget {
     var product = products.firstWhere((product) => product['id'] == id);
     return Scaffold(
       appBar: AppBar(
-        title: Text('Product Details'),
+        title: const Text('Product Details'),
       ),
       body: Center(
         child: Column(
@@ -21,12 +23,12 @@ class ProductDetails extends StatelessWidget {
               width: 500,
             ),
             Text(product['name'], style: GoogleFonts.fahkwang(fontSize: 30)),
-            Text('${product['price']}', style: TextStyle(fontSize: 15)),
-            Text('${product['rating']}', style: TextStyle(fontSize: 15)),
+            Text('${product['price']}', style: const TextStyle(fontSize: 15)),
+            Text('${product['rating']}', style: const TextStyle(fontSize: 15)),
             Padding(
               padding: const EdgeInsets.all(10),
               child:
-                  Text(product['description'], style: TextStyle(fontSize: 10)),
+                  Text(product['description'], style: const TextStyle(fontSize: 10)),
             )
           ],
         ),

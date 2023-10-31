@@ -22,10 +22,10 @@ class DataStateless extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Image.network("$img", height: 200),
-            Text("Name :   $name", style: TextStyle(fontSize: 40)),
-            Text("Location :  $location", style: TextStyle(fontSize: 30)),
-            Text("Phone :   $phone", style: TextStyle(fontSize: 20)),
+            Image.network(img, height: 200),
+            Text("Name :   $name", style: const TextStyle(fontSize: 40)),
+            Text("Location :  $location", style: const TextStyle(fontSize: 30)),
+            Text("Phone :   $phone", style: const TextStyle(fontSize: 20)),
           ],
         ),
       ),

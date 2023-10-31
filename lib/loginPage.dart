@@ -16,6 +16,8 @@ class Login_Page extends StatelessWidget {
   final uname_controller = TextEditingController();
   final pass_controller = TextEditingController();
 
+  Login_Page({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -73,7 +75,7 @@ class Login_Page extends StatelessWidget {
                   if (username == uname_controller.text &&
                       password == pass_controller.text) {
                     Navigator.of(context)
-                        .push(MaterialPageRoute(builder: (context) => Home()));
+                        .push(MaterialPageRoute(builder: (context) => const Home()));
                   } else {
                     ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                       content: Text(
@@ -86,7 +88,7 @@ class Login_Page extends StatelessWidget {
             TextButton(
                 onPressed: () {
                   Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => RegistrationPage()));
+                      builder: (context) => const RegistrationPage()));
                 },
                 child: const Text('Not a User? SignUp Here!!!!'))
           ],

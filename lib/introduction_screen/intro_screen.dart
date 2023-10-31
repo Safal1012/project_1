@@ -3,15 +3,17 @@ import 'package:introduction_screen/introduction_screen.dart';
 import 'package:project_1/Stateful_Splash.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: IntroScreenn(),
   ));
 }
 
 class IntroScreenn extends StatelessWidget {
+  const IntroScreenn({super.key});
+
   @override
   Widget build(BuildContext context) {
-    PageDecoration decorationPage = PageDecoration(
+    PageDecoration decorationPage = const PageDecoration(
       titleTextStyle: TextStyle(
           fontSize: 30, fontWeight: FontWeight.bold, color: Colors.black),
       bodyTextStyle: TextStyle(
@@ -51,20 +53,20 @@ class IntroScreenn extends StatelessWidget {
         )
       ],
       onSkip: () => Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => Splash2())),
+          .push(MaterialPageRoute(builder: (context) => const Splash2())),
       onDone: () => Navigator.of(context)
-          .push(MaterialPageRoute(builder: (context) => Splash2())),
+          .push(MaterialPageRoute(builder: (context) => const Splash2())),
       showSkipButton: true,
-      skip: Text('Skip'),
+      skip: const Text('Skip'),
       showBackButton: false,
-      back: Text('Back'),
-      next: Icon(Icons.arrow_forward_rounded),
-      done: Text('Done'),
+      back: const Text('Back'),
+      next: const Icon(Icons.arrow_forward_rounded),
+      done: const Text('Done'),
       dotsDecorator: DotsDecorator(
           activeShape:
               RoundedRectangleBorder(borderRadius: BorderRadius.circular(25)),
-          size: Size(12, 10),
-          activeSize: Size(22, 10),
+          size: const Size(12, 10),
+          activeSize: const Size(22, 10),
           activeColor: Colors.red),
     );
   }

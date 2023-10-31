@@ -22,7 +22,7 @@ class Car_Slider extends StatelessWidget {
           GestureDetector(
             onTap: () {
               Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (context) => FiCard()));
+                  .push(MaterialPageRoute(builder: (context) => const FiCard()));
             },
             child: Container(
               decoration: const BoxDecoration(

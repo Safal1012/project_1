@@ -1,4 +1,3 @@
-import 'package:convex_bottom_bar/convex_bottom_bar.dart';
 import 'package:flutter/material.dart';
 
 import '../fi_atm.dart';
@@ -7,19 +6,21 @@ import '../gridview_examples/gridview5.dart';
 import '../stateful_login.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(const MaterialApp(
     home: BottomBarEx(),
   ));
 }
 
 class BottomBarEx extends StatefulWidget {
+  const BottomBarEx({super.key});
+
   @override
   State<BottomBarEx> createState() => _BottomBarExState();
 }
 
 class _BottomBarExState extends State<BottomBarEx> {
   int index = 0;
-  var screens = [FiCard(), GridView2(), GridView5(), Login_stateful()];
+  var screens = [const FiCard(), const GridView2(), const GridView5(), const Login_stateful()];
 
   @override
   Widget build(BuildContext context) {
